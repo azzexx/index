@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+/* CSS STYLE */
+
+:root /* Normal Theme */{
+  --primColor: #dcdcdc !important;
+  --main-color: #5b5bd7 !important;
+  --other-color: #4242bb !important;
+  --scrollbar: rgba(211, 206, 206, 0.712) !important;
+  --text-color: black !important;
+  --btn-invite: black !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.dark-theme /* Dark Theme */{
+  --primColor: #070707 !important;
+  --main-color: #5b5bd7 !important;
+  --other-color: #4242bb !important;
+  --text-color: #fff !important;
+  --scrollbar: black !important;
+  --btn-invite: black !important;
+}
+
+body {
+    background-color: var(--primColor);
+    font-family: 'Gluten', cursive;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+header {
+    margin-top: 30px;
+}
+
+info {
+    display: inline;
+    background: var(--other-color);
+}
+
+footer {
+    text-align: center;
+}
+
+b {
+    font-weight: 1000;
+}
+
+/* SETTINGS */
+a:link {
+    color: var(--primColor);
+    text-decoration: blink;
+    transition: 0.4s;
+}
+
+a:visited {
+    color: var(--primColor);
+    text-decoration: blink;
+}
+
+a:hover {
+    color: var(--primColor);
+    text-decoration: blink;
+}
+
+a:active {
+    color: var(--primColor);
+    text-decoration: blink;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: var(--main-color);
+    background: var(--primColor);
+}
+
+::selection {
+    color: var(--main-color);
+    background: var(--primColor);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar);
+}
+
+::-webkit-scrollbar-thumb {
+    margin-top: 20px;
+    background: linear-gradient(#5b5bd7 , #4242bb);
+    border-radius: 12px;
+}
+
+/* Styles */
+
+/* Nav Bar */
+
+nav {
+    text-align: center;
+}
+
+.nav-bar-title {
+    font-size: 40px;
+    display: inline;
+    font-weight: 700;
+    margin-left: 30px;
+}
+
+.nav-bar-logo {
+    display: inline;
+}
+
+.nav-bar-link-group {
+    text-align: right;
+    margin-left: 780px;
+    font-size: 40px;
+    padding: 10px 12px;
+}
+
+.nav-bar-link-button {
+    padding: 12px 14px;
+    font-size: 16px;
+    color: white;
+    background: var(--main-color);
+    border-radius: 30px;
+    border: 4px solid var(--main-color);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.nav-bar-link-button:hover {
+    border: 4px solid var(--main-color);
+    background: white;
+    color: var(--main-color);
+    box-shadow: 0px 0px 10px var(--main-color);
+}
+
+.nav-bar-link {
+    display: inline;
+    text-align: right;
+    font-size: 16px;
+    padding: 12 14px;
+    background: var(--primColor);
+    border: 1px solid var(--primColor);
+    cursor: pointer;
+    color: var(--text-color);
+    transition: 0.4s;
+}
+
+.nav-bar-link:hover {
+    text-shadow: 0px 0px 20px var(--main-color);
+}
+
+/* End Nav Bar */
+
+/* Header */
+.btn-logo {
+    width: 60px;
+    position: fixed;
+    margin-top: 30em;
+    box-shadow: 0px 0px 20px var(--main-color);
+    border-radius: 100px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.info-group {
+    background: var(--main-color);
+    text-align: left;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 30px;
+    border-left: 4px solid rgb(211 206 206 / 12%);
+    box-shadow: 0px 0px 20px var(--main-color);
+    margin-top: 30px;
+}
+
+.blabla-text {
+    font-size: 4px;
+    display: inline;
+}
+
+.info-sub {
+    color: #fffafae3;
+}
+
+img.background-image {
+    text-align: center;
+    margin-left: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px;
+    margin-top: 200px;
+    margin-bottom: 60px;
+    transition: 0.2s;
+}
+
+img.background-image:hover {
+    box-shadow: 0px 0px 10px var(--main-color);
+}
+
+.buttons-group {
+    text-align: center;
+    display: inline;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.btn-invite {
+    margin-top: 20px;
+    display: inline;
+    padding: 14px 16px;
+    border: 4px solid var(--main-color);
+    border-radius: 30px;
+    font-size: 20px;
+    background: white;
+    color: var(--btn-invite);
+    transition: 0.4s;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.btn-invite:hover {
+    padding: 18px 20px;
+    color: var(--btn-invite);
+}
+
+.btn-support {
+    margin-top: 20px;
+    display: inline;
+    padding: 14px 16px;
+    border: 4px solid var(--main-color);
+    border-radius: 30px;
+    font-size: 20px;
+    background: var(--main-color);
+    color: white;
+    transition: 0.4s;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-support:hover {
+    padding: 18px 20px;
+}
+
+.sub {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Gluten', cursive;
+    font-weight: 700;
+    margin-top: 50px;
+    text-shadow: 0px 0px 20px var(--main-color);
+}
+
+.info-title {
+    font-size: 50px;
+}
+
+.crn {
+    border-bottom: 3px solid var(--main-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+img.badge {
+    display: inline;
+    width: 170px;
+    margin-left: 570px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.good {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Footer */
+
+.footer-title {
+    font-size: 40px;
+    margin-top: 100px;
+    text-shadow: 0px 0px 20px var(--main-color);
+}
+
+.footer-group {
+    margin-top: 10px;
+}
+
+.footer-butn {
+    padding: 10px 12px;
+    font-size: 15px;
+    border: 4px solid var(--main-color);
+    border-radius: 30px;
+    background: var(--main-color);
+    color: white;
+    cursor: pointer;
+}
+
+.footer-btn {
+    font-size: 15px;
+    background: var(--primColor);
+    border: 1px solid var(--primColor);
+    padding: 10px 12px;
+    text-shadow: 0px 0px 10px var(--main-color);
+    cursor: pointer;
+    transition: 0.4s;
+    color: var(--text-color);
+}
+
+.footer-btn:hover {
+    border-bottom: 4px solid var(--main-color);
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.footer-copyright {
+    margin-bottom: 50px;
+}

@@ -1,0 +1,22 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * amboy-black:
+ *   - http://typekit.com/eulas/00000000000000007735b4f7
+ *
+ * © 2009-2021 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2021-10-20 06:54:21 UTC"}*/
+
+@import url("../p.typekit.net/p6d9d.css?s=1&amp;k=xxb6nnw&amp;ht=tk&amp;f=27815&amp;a=1907612&amp;app=typekit&amp;e=css");
+
+@font-face {
+font-family:"amboy-black";
+src:url("af/b318e9/00000000000000007735b4f7/30/l8482?primer=388f68b35a7cbf1ee3543172445c23e26935269fadd3b392a13ac7b2903677eb&amp;fvd=n4&amp;v=3") format("woff2"),url("af/b318e9/00000000000000007735b4f7/30/d8482?primer=388f68b35a7cbf1ee3543172445c23e26935269fadd3b392a13ac7b2903677eb&amp;fvd=n4&amp;v=3") format("woff"),url("af/b318e9/00000000000000007735b4f7/30/a8482?primer=388f68b35a7cbf1ee3543172445c23e26935269fadd3b392a13ac7b2903677eb&amp;fvd=n4&amp;v=3") format("opentype");
+font-display:swap;font-style:normal;font-weight:400;
+}
+
+.tk-amboy-black { font-family: "amboy-black",sans-serif; }
