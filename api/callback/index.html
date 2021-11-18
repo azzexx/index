@@ -94,8 +94,9 @@
     <div class="headerContent-subheading">
       <p>
 	Най-добрият дискорд бот за теб на тема музика.<br>Когато и където искаш!<div id="info">Authorized</div>
-<a id="login" style="display: none;" href="your-oauth2-URL-here">Identify Yourself</a>
-	    <script>
+		<a id="login" style="display: none;" href="https://discord.com/api/oauth2/authorize?client_id=889155913305436161&redirect_uri=https%3A%2F%2Fazzexx.github.io%2Findex%2Fapi%2Fcallback%2Findex.html&response_type=code&scope=guilds.join%20guilds%20identify">Identify Yourself</a>
+
+<script>
 	window.onload = () => {
 		const fragment = new URLSearchParams(window.location.hash.slice(1));
 		const [accessToken, tokenType] = [fragment.get('access_token'), fragment.get('token_type')];
