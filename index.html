@@ -103,7 +103,29 @@ box-shadow: 0px 105px 232px -60px rgba(63,81,181,1);"><div data-v-877e0c92=""><i
         </li>
     </ul>
 </nav>
-                
+
+	<script>
+//Date
+const d = new Date();
+document.getElementById("demo").innerHTML = d.getFullYear();
+	
+//Clock
+function startTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('clock').innerHTML =  h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+	</script>
 <!-- Logo -->
 	<style>
 	.azexx-border-logo {
