@@ -48,6 +48,7 @@
 
     <link rel="stylesheet" href="https://azzexx.github.io/index/css/main.css">
     <link rel="stylesheet" href="https://azzexx.github.io/index/use.typekit.net/xxb6nnw.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	
     <link rel="preload" href="https://azzexx.github.io/index/fonts/inter-regular.woff2" as="font" type="font/woff2">
     <link rel="preload" href="https://azzexx.github.io/index/fonts/inter-italic.woff2" as="font" type="font/woff2">
@@ -422,28 +423,48 @@ animation: mybottom 1s ease 0s 1 normal forwards;
 	 <!-- Image -->
 			<div class="fullBleed imageDivider"><img src="img/wave.png" alt="" aria-hidden="true"></div>
 
+<!-- slide -->
 
+<div class="container">
+  <h2>Carousel Example</h2>  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
 
-<!-- Support Web Block -->
-<div id="azexx-support" class="episodesRecent">
-    <h2>Support</h2>
-    <ul class="episodesList">
-     <li class="episodeSingle" style="cursor: pointer;">
-    <header class="episodeSingle-header">
-        <h3><a>Azexx &amp; .R4ptur3</a></h3>
-        <div class="episodeMeta">
-            <p><span class="episodeMeta-date">Sun, 19 Sep 2021</span><span class="episodeMeta-number">#2</span></p>
-        </div>
-    </header>
-    <div class="episodeSingle-desc">
-        <p>
-	  Сайтът се поддържа за момента от неговият създател <b>.R4ptur3</b>.<br>Този сайт е направен информативно относно дискорд бота <b>Azexx</b>!
-	</p>
-    	  </div>
-	</li>
-    </ul>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="la.jpg" alt="Los Angeles" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="chicago.jpg" alt="Chicago" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="ny.jpg" alt="New york" style="width:100%;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 </div>
-<!-- End Support Web Block -->
+<!-- end slide -->
+	
+	
+	
 
 <div style="margin-top: 160px;border-top: var(--border-thickness-button) solid var(--color-pink-dark);">
 
