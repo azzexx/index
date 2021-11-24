@@ -283,15 +283,16 @@ function checkTime(i) {
 	
 	
 	<style>
-	.slider {
+.slider {
   font-family: Roboto, sans-serif;
   position: relative;
   width: 960px;
   height: 300px;
   margin: 50px auto;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
-    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  border: 1px solid #333539;
+  background: #222226;
 }
 
 .slider-controls {
@@ -322,21 +323,22 @@ function checkTime(i) {
   height: 20px;
   width: 20px;
   border-radius: 50%;
+  border: 1px solid #333539;	
   cursor: pointer;
-  background-color: #212121;
+  background-color: var(--color-bg);
   transition: background-color 0.2s linear;
 }
 
 #btn-1:checked ~ .slider-controls label[for="btn-1"] {
-  background-color: #ff4081;
+  background-color: #3f51b5;
 }
 
 #btn-2:checked ~ .slider-controls label[for="btn-2"] {
-  background-color: #ff4081;
+  background-color: #3f51b5;
 }
 
 #btn-3:checked ~ .slider-controls label[for="btn-3"] {
-  background-color: #ff4081;
+  background-color: #3f51b5;
 }
 
 /* SLIDES */
@@ -441,6 +443,7 @@ function checkTime(i) {
 }
 
 </style>
+	
 <div style="margin-top: 160px;border-top: var(--border-thickness-button) solid var(--color-pink-dark);">
 
 <div style="margin-top: 70px;" class="people" id="hosts">
