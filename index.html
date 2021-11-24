@@ -164,6 +164,54 @@ function checkTime(i) {
   75%  {bottom:200px; top:20px;}
   100% {bottom:200px; top:10px;}
 }
+		
+.myright {		
+	animation: myright 1s ease 0s 1 normal forwards;
+}
+		
+@keyframes myright {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateX(250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateX(68px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateX(32px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateX(8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+}
 	</style>
 	
  <div class="headerContent">
@@ -175,7 +223,7 @@ function checkTime(i) {
              <div class="buttons">
                 <a target="blank" href="https://saviuxhere.github.io/weeb" class="button primaryButton">Инфо сайт</a> 				<!--! 	Info Site 	!-->
 		<a target="blank" href="invite" class="button secondaryButton">Покани ме</a>			<!--! 	Invite Bot	!-->	
-            	<a target="blank" href="support" class="button outlineButton">Присъедини се към чата →</a>	<!--! 	Support Server	!-->
+            	<a target="blank" href="support" class="button outlineButton myright">Присъедини се към чата →</a>	<!--! 	Support Server	!-->
              </div>
             </div>
           </header>
