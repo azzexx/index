@@ -164,7 +164,8 @@ function checkTime(i) {
   75%  {bottom:200px; top:20px;}
   100% {bottom:200px; top:10px;}
 }
-		
+
+/* myright */
 .myright {		
 	animation: myright 1s ease 0s 1 normal forwards;
 }
@@ -212,6 +213,104 @@ function checkTime(i) {
     transform: translateX(0);
   }
 }
+
+/* myleft */
+.myleft {
+	animation: myleft 1s ease 0s 1 normal forwards;
+}
+
+@keyframes myleft {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateX(-68px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateX(-28px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateX(-8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+}
+
+/* mybottom */
+.mybottom {
+animation: mybottom 1s ease 0s 1 normal forwards;
+}
+
+@keyframes mybottom {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateY(250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateY(65px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateY(28px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateY(8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+}
 	</style>
 	
  <div class="headerContent">
@@ -221,8 +320,8 @@ function checkTime(i) {
       </p>
 	</div>
              <div class="buttons">
-                <a target="blank" href="https://saviuxhere.github.io/weeb" class="button primaryButton">Инфо сайт</a> 				<!--! 	Info Site 	!-->
-		<a target="blank" href="invite" class="button secondaryButton">Покани ме</a>			<!--! 	Invite Bot	!-->	
+                <a target="blank" href="https://saviuxhere.github.io/weeb" class="button primaryButton myleft">Инфо сайт</a> 				<!--! 	Info Site 	!-->
+		<a target="blank" href="invite" class="button secondaryButton mybottom">Покани ме</a>			<!--! 	Invite Bot	!-->	
             	<a target="blank" href="support" class="button outlineButton myright">Присъедини се към чата →</a>	<!--! 	Support Server	!-->
              </div>
             </div>
