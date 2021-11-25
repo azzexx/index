@@ -177,37 +177,54 @@ function checkTime(i) {
 /**
  * Sticky navigation
  */
-        .nav-bar{
-            display: flex;
-            background-color: rgb(39, 36, 36);
-            position: sticky;
-            top: 0;
-        }
-        ul{
-            display: flex;
-            list-style: none;
-        }
-        a{
-            margin: 5px 10px;
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-        }
-        a:hover{
-            color: rgb(180, 175, 175);
-        }
-        .contentGs1{}		
+#header {}
+#nav {
+  background-color: #000;
+  top: 0;
+  width: 100%;
+}
+#nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+#nav li {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#nav ul li a {
+  color: #ffd600;
+  transition: all 0.4s;
+}
+#nav ul li img {
+  height: 96px;
+  transition: height 0.4s;
+}	
+	
+#nav.fixed {
+  position: fixed;
+  box-shadow: 5px 5px 19px 0px rgba(0, 0, 0, 0.5);
+}
+#nav.fixed ul li img {
+  height: 36px;
+}
+#nav.fixed ul li a {
+  font-size: 14px;
+}
 </style>
-    <div class="nav-bar">
-        <ul>
-            <a href="#"> <li>Home</li> </a>
-            <a href="#"> <li>Documentation</li> </a>
-            <a href="#"> <li>Contact</li> </a>
-            <a href="#"> <li>About</li> </a>
-
-        </ul>
-    </div>	
-			
+<nav id="nav">
+  <ul>
+    <li><a href="#"><img src="https://img.icons8.com/color/96/000000/javascript.png" height="96" /></a></li>
+    <li><a href="#">Documentation</a></li>
+    <li><a href="#">Tutorials</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Community</a></li>      
+  </ul>	
+	
+<article> 			
 <div class="contentGs1">			
 <img class="animationdp" src="DF.png" alt="Image1" style="
     position: absolute;
@@ -583,9 +600,27 @@ function checkTime(i) {
         </div>
     </div>
 </footer>
-</div>
+</article>
+</nav>
+	
+	
 <!-- Google Analytics -->
 <script>
+const nav = document.querySelector('#nav');
+let navTop = nav.offsetTop;
+
+function fixedNav() {
+  if (window.scrollY >= navTop) {    
+    nav.classList.add('fixed');
+  } else {
+    nav.classList.remove('fixed');    
+  }
+}
+
+window.addEventListener('scroll', fixedNav);
+	
+//
+	
 window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 ga('create', 'UA-XXXXX-Y', 'auto');
 ga('send', 'pageview');
