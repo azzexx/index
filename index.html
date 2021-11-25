@@ -173,7 +173,7 @@ function checkTime(i) {
             </div>
           </header>
 <!-- details -->
-<details style="margin-top: 48px;margin-left: -96px;display: inline;" class="question" data-v-8612b6bc="" data-v-42cc7d2e="">
+<details style="margin-top: 48px;margin-left: -96px;display: inline;" class="question mybottombtn" data-v-8612b6bc="" data-v-42cc7d2e="">
   <summary data-v-8612b6bc=""><span data-v-8612b6bc="">
     <p>Контрол на звука</p>
       </span> 
@@ -186,7 +186,7 @@ function checkTime(i) {
 	</div>
 </details>
 
-<details style="display: inline;" class="question" data-v-8612b6bc="" data-v-42cc7d2e="">
+<details style="display: inline;" class="question mybottombtn" data-v-8612b6bc="" data-v-42cc7d2e="">
   <summary data-v-8612b6bc=""><span data-v-8612b6bc="">
     <p>По-дълги песни</p>
       </span> 
@@ -201,7 +201,7 @@ function checkTime(i) {
 	</div>
 </details>
 
-<details style="display: inline;" class="question" data-v-8612b6bc="" data-v-42cc7d2e="">
+<details style="display: inline;" class="question mybottombtn" data-v-8612b6bc="" data-v-42cc7d2e="">
   <summary data-v-8612b6bc=""><span data-v-8612b6bc="">
     <p>По-добро качество на звука</p>
       </span> 
@@ -214,7 +214,7 @@ function checkTime(i) {
 	</div>
 </details>
 
-<details style="display: inline;margin-top: 6px;margin-bottom: -46em;margin-left: 53px;" class="question" data-v-8612b6bc="" data-v-42cc7d2e="">
+<details style="display: inline;margin-top: 6px;margin-bottom: -46em;margin-left: 53px;" class="question mybottombtn" data-v-8612b6bc="" data-v-42cc7d2e="">
   <summary data-v-8612b6bc=""><span data-v-8612b6bc="">
     <p>Аудио ефекти</p>
       </span> 
@@ -227,7 +227,7 @@ function checkTime(i) {
 	</div>
 </details>
 
-<details style="display: inline;" class="question" data-v-8612b6bc="" data-v-42cc7d2e="">
+<details style="display: inline;" class="question mybottombtn" data-v-8612b6bc="" data-v-42cc7d2e="">
   <summary data-v-8612b6bc=""><span data-v-8612b6bc="">
     <p>Автоматично изпълнение</p>
       </span> 
@@ -240,7 +240,7 @@ function checkTime(i) {
 	</div>
 </details>
 
-<details style="display: inline;" class="question" data-v-8612b6bc="" data-v-42cc7d2e="">
+<details style="display: inline;" class="question mybottombtn" data-v-8612b6bc="" data-v-42cc7d2e="">
   <summary data-v-8612b6bc=""><span data-v-8612b6bc="">
     <p>Винаги играе</p>
       </span> 
@@ -880,6 +880,19 @@ animation: mybottom 1s ease 0s 1 normal forwards;
     opacity: 1;
     transform: rotateX(0deg);
     transform-origin: top;
+  }
+}
+
+.mybottombtn { animation: mybottombtn 1s ease 0s 1 normal forwards; }
+@keyframes mybottombtn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 	</style>
