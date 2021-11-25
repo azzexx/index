@@ -177,40 +177,40 @@ function checkTime(i) {
 /**
  * Sticky navigation
  */
-.sticky {
-	background-color: #ffffff;
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0;
-}
-
-.list-inline {
-	list-style: none;
-	margin-left: -0.5em;
-	margin-right: -0.5em;
-	padding: 0;
-}
-
-.list-inline > li {
-	display: inline-block;
-	margin-left: 0.5em;
-	margin-right: 0.5em;
-}
-
-.list-inline > li:before {
-	content: "\200B"; /* 1 */
-	position: absolute; /* 2 */
-}		
+        .nav-bar{
+            display: flex;
+            background-color: rgb(39, 36, 36);
+            position: sticky;
+            top: 0;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+        }
+        a{
+            margin: 5px 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+        a:hover{
+            color: rgb(180, 175, 175);
+        }
+        .contentGs1{
+            height:150vh;
+        }		
 </style>
-<div class="sticky">
-	<ul class="list-inline">
-		<li><a href="#a">Section A</a></li>
-		<li><a href="#b">Section B</a></li>
-		<li><a href="#c">Section C</a></li>
-		<li><a href="#d">Section D</a></li>
-	</ul>
-</div>		
+    <div class="nav-bar">
+        <ul>
+            <a href="#"> <li>Home</li> </a>
+            <a href="#"> <li>Documentation</li> </a>
+            <a href="#"> <li>Contact</li> </a>
+            <a href="#"> <li>About</li> </a>
+
+        </ul>
+    </div>	
 			
+<div class="contentGs1">			
 <img class="animationdp" src="DF.png" alt="Image1" style="
     position: absolute;
     width: 500px;
@@ -585,7 +585,7 @@ function checkTime(i) {
         </div>
     </div>
 </footer>
-
+</div>
 <!-- Google Analytics -->
 <script>
 window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
