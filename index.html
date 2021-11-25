@@ -168,51 +168,25 @@ function checkTime(i) {
           </header>
             	<main class="container" id="content" role="main">
                             <div class="fullBleed imageDivider">
-    				<img src="img/wave.png" alt="" aria-hidden="true"></div>
-
+				   <img src="img/wave.png" alt="" aria-hidden="true"></div>
+	
+		
+		
 <style>
-#navbarGs1 {
-  overflow: hidden;
-  background-color: #333;
-}
-
-#navbarGs1 a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-#navbarGs1 a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.contentGs1 {
-  padding: 16px;
-}
-
 .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + .contentGs1 {
-  padding-top: 60px;
-}
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}			
 </style>
-
-<div id="navbarGs1">
-  <a class="active" href="javascript:void(0)">Home</a>
-  <a href="javascript:void(0)">News</a>
-  <a href="javascript:void(0)">Contact</a>
-</div>
-
-<div class="contentGs1">			
+<div class="sticky">
+	<ul>
+		<li><a href="#a">Section A</a></li>
+		<li><a href="#b">Section B</a></li>
+		<li><a href="#c">Section C</a></li>
+		<li><a href="#d">Section D</a></li>
+	</ul>
+</div>			
 			
 <img class="animationdp" src="DF.png" alt="Image1" style="
     position: absolute;
@@ -589,23 +563,6 @@ function checkTime(i) {
     </div>
 </footer>
 
-</div>
-
-<script>
-window.onscroll = function() {myFunction()};
-
-var navbar = document.getElementById("navbarGs1");
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-</script>
-	
 <!-- Google Analytics -->
 <script>
 window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
