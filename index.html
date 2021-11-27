@@ -570,7 +570,14 @@ function checkTime(i) {
  <div class="headerContent">
     <div class="headerContent-subheading">
       <p>
-	Най-добрият дискорд бот за теб на тема музика.<br>Когато и където искаш!	
+	 Най-добрият дискорд бот за теб на тема музика.<br>Когато и където искаш!<mausecursor></mausecursor>
+<script>
+$(document).ready(function(){
+  $(document).mousemove(function(event){
+    $("mausecursor").text(event.pageX + ", " + event.pageY);
+  });
+});
+</script>
       </p>
 	</div>
              <div class="buttons">
@@ -1198,13 +1205,13 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 ga('create', 'UA-XXXXX-Y', 'auto');
 ga('send', 'pageview');
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 <!-- End Google Analytics -->
 
+	<script async src='https://www.google-analytics.com/analytics.js'></script>
 	<script async src="https://azzexx.github.io/index/js/site.js"></script>
 	<script async src="https://www.google-analytics.com/analytics.js"</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     	<script async src="cdn.usefathom.com/script.js" data-site="DYYSRQNJ" defer=""></script>
-	<!-- JavaScript Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	
 <strong href="https://azzexx.github.io/index" onclick="location.href='/home'" />
