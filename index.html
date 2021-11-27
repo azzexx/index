@@ -850,8 +850,8 @@ function checkTime(i) {
 
 <footer class="wrapper" role="contentinfo" style="margin-left: 200px;">
     			<div class="footerTop flow" style="text-align: left;">
-        			<h2><a class="azexx-logo" style="position: absolute;">Azexx</a></h2>
-<div class="recordplayer" style="margin-left: 28em;morgin-top: 2em;border: 1px solid #333539;border-radius: 6px;">
+        			<h2><a class="azexx-logo" style="position: absolute;margin-top: -1px;">Azexx</a></h2>
+<div class="recordplayer" style="margin-left: 56em;morgin-top: 2em;border: 1px solid #333539;border-radius: 6px;">
     <div class="recordplayer__top">
         <div class="record">
             <div class="record__label"></div>
@@ -1108,7 +1108,9 @@ function checkTime(i) {
 	}
 }
 </style>
-           				<p>
+           				<p style="
+    margin-top: -209px;
+">
 	    				 Най-добрият дискорд бот за теб на тема музика.<br>Когато и където искаш!
 	   				</p>
             <div class="buttons">
@@ -1145,8 +1147,51 @@ function checkTime(i) {
 </footer>
 	
 	
+	
 <!-- Google Analytics -->
-<script>	
+<script>
+function createParticle (x, y) {
+  var size = Math.random() * 50 + 10;
+  
+  x -= (size / 2);
+  y -= (size / 2);
+  
+  var particle = document.createElement('div');
+  document.body.appendChild(particle);
+  
+  TweenMax.set(particle, {
+    x: x, 
+    y: y,
+    width: size,
+    height: size,
+    background: function () {
+      return `hsl(${Math.random() *90+200}, 50%, 50%)`
+    }
+  });
+  TweenMax.to(particle, Math.random() * 2 + 1, {
+    x: x + (Math.random() - 0.5) * 200,
+    y: y + (Math.random() - 0.5) * 200,
+    opacity: 0,
+    scale:0,
+    ease: Power2.easeOut,
+    onComplete: function () {
+      document.body.removeChild(particle);
+    }
+  })
+}
+
+window.addEventListener('mousemove', function (e) {
+  var x = e.clientX;
+  var y = e.clientY;
+  createParticle(x, y);
+});
+document.body.addEventListener('touchmove', function (e) {
+  var x = e.touches[0].clientX;
+  var y = e.touches[0].clientY;
+  e.preventDefault();
+  createParticle(x, y);
+});
+	
 //
 	
 window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
