@@ -465,223 +465,6 @@ margin-left: 69em;
   75%  {right:200px; left:20px;}
   100% {right:200px; left:10px;}
 }
-
-
-*, *::before, *::after {
-	 box-sizing: border-box;
-}
- .recordplayer__top .record::before, .recordplayer__top .record__label::before, .recordplayer__top .record__label::after, .recordplayer__top .controls .needle .needle__front::before, .recordplayer__top .controls .needle .needle__end::before, .recordplayer__top .controls .switches .knob::before, .recordplayer__top .controls .switches .level::before {
-	 content: "";
-	 display: block;
-	 position: absolute;
-}
- body {
-	 background: #ecc8ae;
-	 width: 100%;
-	 min-height: 100vh;
-	 display: flex;
-	 flex-direction: column;
-	 align-items: center;
-	 justify-content: center;
-}
- .recordplayer {
-	 position: relative;
-	 width: 25rem;
-	 height: 20rem;
-}
- .recordplayer__top {
-	 z-index: 5;
-	 position: absolute;
-	 top: 0;
-	 width: 100%;
-	 height: 90%;
-	 background: #f1f7ed;
-	 border-radius: 0.3rem;
-	 box-shadow: inset 0px 0px 8px rgba(68, 69, 69, 0.22);
-	 display: flex;
-	 flex-direction: row;
-	 justify-content: space-around;
-	 align-items: center;
-}
- .recordplayer__top .record {
-	 width: 15rem;
-	 height: 15rem;
-	 border-radius: 50%;
-	 background: #1f1b20;
-	 background-image: radial-gradient(transparent 25%, #000 25%, #000 28%, transparent 28%), radial-gradient(transparent 35%, #000 35%, #000 38%, transparent 38%), radial-gradient(transparent 45%, #000 45%, #000 48%, transparent 48%), radial-gradient(transparent 55%, #000 55%, #000 58%, transparent 58%), radial-gradient(transparent 65%, #000 65%, #000 68%, transparent 68%);
-	 display: flex;
-	 align-items: center;
-	 justify-content: center;
-	 animation: spin 8s linear infinite;
-}
- .recordplayer__top .record::before {
-	 background-image: radial-gradient(transparent 25%, #f4b488 25%, #f4b488 28%, transparent 28%), radial-gradient(transparent 35%, #f4b488 35%, #f4b488 38%, transparent 38%), radial-gradient(transparent 45%, #f4b488 45%, #f4b488 48%, transparent 48%), radial-gradient(transparent 55%, #f4b488 55%, #f4b488 58%, transparent 58%), radial-gradient(transparent 65%, #f4b488 65%, #f4b488 68%, transparent 68%);
-	 background-color: #f2a571;
-	 width: 14rem;
-	 height: 14rem;
-	 border-radius: 50%;
-	 clip-path: polygon(25% 0, 75% 0, 50% 50%, 75% 100%, 25% 100%, 50% 50%);
-}
- .recordplayer__top .record__label {
-	 position: absolute;
-	 width: 5rem;
-	 height: 5rem;
-	 border-radius: 50%;
-	 background: #ffa264;
-	 display: flex;
-	 align-items: center;
-	 justify-content: center;
-}
- .recordplayer__top .record__label::before {
-	 width: 0.75rem;
-	 height: 0.75rem;
-	 background: #1f1b20;
-	 border-radius: 50%;
-}
- .recordplayer__top .record__label::after {
-	 width: 0.5rem;
-	 height: 0.5rem;
-	 background: #f1f7ed;
-	 border-radius: 50%;
-}
- .recordplayer__top .controls {
-	 width: 8rem;
-	 height: 100%;
-	 display: flex;
-	 flex-direction: column;
-	 align-items: flex-end;
-	 justify-content: space-evenly;
-}
- .recordplayer__top .controls .needle {
-	 position: relative;
-	 position: relative;
-	 width: 100%;
-	 height: 8rem;
-	 display: flex;
-	 flex-direction: column;
-	 align-items: center;
-	 justify-content: space-around;
-}
- .recordplayer__top .controls .needle__holder {
-	 width: 4rem;
-	 height: 4rem;
-	 border-radius: 50%;
-	 border: 0.25rem solid #5a5e58;
-	 background: #80857d;
-}
- .recordplayer__top .controls .needle .needle__front, .recordplayer__top .controls .needle .needle__end {
-	 position: absolute;
-	 width: 0.65rem;
-	 background: #b4b7b1;
-}
- .recordplayer__top .controls .needle .needle__front {
-	 height: 8rem;
-	 top: 45%;
-	 left: 50%;
-	 transform: rotateZ(36deg) translate(0%, -40%);
-	 transform-origin: top;
-}
- .recordplayer__top .controls .needle .needle__front::before {
-	 width: 1.25rem;
-	 height: 1.25rem;
-	 background: #80857d;
-	 border-radius: 3px;
-	 left: -0.325rem;
-}
- .recordplayer__top .controls .needle .needle__end {
-	 height: 5rem;
-	 bottom: -54%;
-	 left: 17%;
-	 transform: rotateZ(55deg);
-	 transform-origin: top;
-}
- .recordplayer__top .controls .needle .needle__end::before {
-	 width: 0.85rem;
-	 height: 2rem;
-	 background: #4e514b;
-	 border-radius: 0.3rem;
-	 bottom: -20%;
-	 left: -0.125rem;
-}
- .recordplayer__top .controls .switches {
-	 width: 6rem;
-	 height: 8rem;
-	 background: rgba(242, 165, 113, 0.5);
-	 border: 0.25rem solid rgba(255, 162, 100, 0.5);
-	 border-radius: 0.25rem;
-	 display: flex;
-	 flex-direction: row;
-	 align-items: center;
-	 justify-content: space-around;
-}
- .recordplayer__top .controls .switches .knob__container, .recordplayer__top .controls .switches .level__container {
-	 width: 50%;
-	 height: 100%;
-	 display: flex;
-	 flex-direction: column;
-	 align-items: center;
-	 justify-content: space-around;
-}
- .recordplayer__top .controls .switches .knob {
-	 position: relative;
-	 width: 2rem;
-	 height: 2rem;
-	 border-radius: 50%;
-	 background: #f1f7ed;
-	 border: 0.2rem solid #515252;
-	 box-shadow: inset 0px 0px 6px #c8dfb8, 0px 0px 16px 0px rgba(241, 156, 99, 0.5);
-}
- .recordplayer__top .controls .switches .knob::before {
-	 width: 0.25rem;
-	 height: 0.5rem;
-	 background: #444545;
-	 left: 0;
-}
- .recordplayer__top .controls .switches .knob:nth-child(1)::before {
-	 left: 12%;
-	 top: 50%;
-	 transform: rotateZ(60deg);
-}
- .recordplayer__top .controls .switches .knob:nth-child(2)::before {
-	 left: 32%;
-	 top: 71%;
-	 transform: rotateZ(25deg);
-}
- .recordplayer__top .controls .switches .level {
-	 position: relative;
-	 width: 0.25rem;
-	 background: #9a9e97;
-	 height: 6rem;
-	 border-radius: 1rem;
-}
- .recordplayer__top .controls .switches .level::before {
-	 width: 2rem;
-	 height: 1rem;
-	 background: #5a5e58;
-	 border-radius: 0.25rem;
-	 left: -0.85rem;
-	 top: 28%;
-}
- .recordplayer__bottom {
-	 z-index: 1;
-	 position: absolute;
-	 bottom: 0;
-	 width: 100%;
-	 height: 15%;
-	 background: linear-gradient(#1e1e1e, #444545);
-	 border-radius: 0.3rem;
-}
- @keyframes spin {
-	 0% {
-		 transform: rotateZ(0deg);
-	}
-	 50% {
-		 transform: rotateZ(180deg);
-	}
-	 100% {
-		 transform: rotateZ(360deg);
-	}
-}
 </style>
 </head>
 <body class="page-builderTemplate"style="
@@ -1068,7 +851,7 @@ function checkTime(i) {
 <footer class="wrapper" role="contentinfo" style="margin-left: 200px;">
     			<div class="footerTop flow" style="text-align: left;">
         			<h2><a class="azexx-logo" style="position: absolute;">Azexx</a></h2>
-				<div class="recordplayer" style="margin-left: 28em;morgin-top: 2em;border: 1px solid #333539;border-radius: 6px;">
+<div class="recordplayer" style="margin-left: 28em;morgin-top: 2em;border: 1px solid #333539;border-radius: 6px;">
     <div class="recordplayer__top">
         <div class="record">
             <div class="record__label"></div>
@@ -1092,6 +875,239 @@ function checkTime(i) {
     </div>
     <div class="recordplayer__bottom"></div>
 </div>
+<style>
+<div class="recordplayer">
+    <div class="recordplayer__top">
+        <div class="record">
+            <div class="record__label"></div>
+        </div>
+        <div class="controls">
+            <div class="needle">
+                <div class="needle__holder"></div>
+                <div class="needle__front"></div>
+                <div class="needle__end"></div>
+            </div>
+            <div class="switches">
+                <div class="knob__container">
+                    <div class="knob"></div>
+                    <div class="knob"></div>
+                </div>
+                <div class="level__container">
+                    <div class="level"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="recordplayer__bottom"></div>
+</div>
+<style>
+*, *::before, *::after {
+	 box-sizing: border-box;
+}
+ .recordplayer__top .record::before, .recordplayer__top .record__label::before, .recordplayer__top .record__label::after, .recordplayer__top .controls .needle .needle__front::before, .recordplayer__top .controls .needle .needle__end::before, .recordplayer__top .controls .switches .knob::before, .recordplayer__top .controls .switches .level::before {
+	 content: "";
+	 display: block;
+	 position: absolute;
+}
+ .recordplayer {
+	 position: relative;
+	 width: 25rem;
+	 height: 20rem;
+}
+ .recordplayer__top {
+	 z-index: 5;
+	 position: absolute;
+	 top: 0;
+	 width: 100%;
+	 height: 90%;
+	 background: #f1f7ed;
+	 border-radius: 0.3rem;
+	 box-shadow: inset 0px 0px 8px rgba(68, 69, 69, 0.22);
+	 display: flex;
+	 flex-direction: row;
+	 justify-content: space-around;
+	 align-items: center;
+}
+ .recordplayer__top .record {
+	 width: 15rem;
+	 height: 15rem;
+	 border-radius: 50%;
+	 background: #1f1b20;
+	 background-image: radial-gradient(transparent 25%, #000 25%, #000 28%, transparent 28%), radial-gradient(transparent 35%, #000 35%, #000 38%, transparent 38%), radial-gradient(transparent 45%, #000 45%, #000 48%, transparent 48%), radial-gradient(transparent 55%, #000 55%, #000 58%, transparent 58%), radial-gradient(transparent 65%, #000 65%, #000 68%, transparent 68%);
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 animation: spin 8s linear infinite;
+}
+ .recordplayer__top .record::before {
+	 background-image: radial-gradient(transparent 25%, #3f51b5 25%, #3f51b5 28%, transparent 28%), radial-gradient(transparent 35%, #3f51b5 35%, #3f51b5 38%, transparent 38%), radial-gradient(transparent 45%, #3f51b5 45%, #3f51b5 48%, transparent 48%), radial-gradient(transparent 55%, #3f51b5 55%, #3f51b5 58%, transparent 58%), radial-gradient(transparent 65%, #3f51b5 65%, #3f51b5 68%, transparent 68%);
+	 background-color: #5b5bd7;
+	 width: 14rem;
+	 height: 14rem;
+	 border-radius: 50%;
+	 clip-path: polygon(25% 0, 75% 0, 50% 50%, 75% 100%, 25% 100%, 50% 50%);
+}
+ .recordplayer__top .record__label {
+	 position: absolute;
+	 width: 5rem;
+	 height: 5rem;
+	 border-radius: 50%;
+	 background: #303bc0;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+}
+ .recordplayer__top .record__label::before {
+	 width: 0.75rem;
+	 height: 0.75rem;
+	 background: #1f1b20;
+	 border-radius: 50%;
+}
+ .recordplayer__top .record__label::after {
+	 width: 0.5rem;
+	 height: 0.5rem;
+	 background: #f1f7ed;
+	 border-radius: 50%;
+}
+ .recordplayer__top .controls {
+	 width: 8rem;
+	 height: 100%;
+	 display: flex;
+	 flex-direction: column;
+	 align-items: flex-end;
+	 justify-content: space-evenly;
+}
+ .recordplayer__top .controls .needle {
+	 position: relative;
+	 position: relative;
+	 width: 100%;
+	 height: 8rem;
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 justify-content: space-around;
+}
+ .recordplayer__top .controls .needle__holder {
+	 width: 4rem;
+	 height: 4rem;
+	 border-radius: 50%;
+	 border: 0.25rem solid #5a5e58;
+	 background: #80857d;
+}
+ .recordplayer__top .controls .needle .needle__front, .recordplayer__top .controls .needle .needle__end {
+	 position: absolute;
+	 width: 0.65rem;
+	 background: #b4b7b1;
+}
+ .recordplayer__top .controls .needle .needle__front {
+	 height: 8rem;
+	 top: 45%;
+	 left: 50%;
+	 transform: rotateZ(36deg) translate(0%, -40%);
+	 transform-origin: top;
+}
+ .recordplayer__top .controls .needle .needle__front::before {
+	 width: 1.25rem;
+	 height: 1.25rem;
+	 background: #80857d;
+	 border-radius: 3px;
+	 left: -0.325rem;
+}
+ .recordplayer__top .controls .needle .needle__end {
+	 height: 5rem;
+	 bottom: -54%;
+	 left: 17%;
+	 transform: rotateZ(55deg);
+	 transform-origin: top;
+}
+ .recordplayer__top .controls .needle .needle__end::before {
+	 width: 0.85rem;
+	 height: 2rem;
+	 background: #4e514b;
+	 border-radius: 0.3rem;
+	 bottom: -20%;
+	 left: -0.125rem;
+}
+ .recordplayer__top .controls .switches {
+	 width: 6rem;
+	 height: 8rem;
+	 background: #3f51b5;
+	 border: 0.25rem solid #5b5bd7;
+	 border-radius: 0.25rem;
+	 display: flex;
+	 flex-direction: row;
+	 align-items: center;
+	 justify-content: space-around;
+}
+ .recordplayer__top .controls .switches .knob__container, .recordplayer__top .controls .switches .level__container {
+	 width: 50%;
+	 height: 100%;
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 justify-content: space-around;
+}
+ .recordplayer__top .controls .switches .knob {
+	 position: relative;
+	 width: 2rem;
+	 height: 2rem;
+	 border-radius: 50%;
+	 background: #f1f7ed;
+	 border: 0.2rem solid #515252;
+	 box-shadow: inset 0px 0px 6px #c8dfb8, 0px 0px 16px 0px #1f1b20;
+}
+ .recordplayer__top .controls .switches .knob::before {
+	 width: 0.25rem;
+	 height: 0.5rem;
+	 background: #444545;
+	 left: 0;
+}
+ .recordplayer__top .controls .switches .knob:nth-child(1)::before {
+	 left: 12%;
+	 top: 50%;
+	 transform: rotateZ(60deg);
+}
+ .recordplayer__top .controls .switches .knob:nth-child(2)::before {
+	 left: 32%;
+	 top: 71%;
+	 transform: rotateZ(25deg);
+}
+ .recordplayer__top .controls .switches .level {
+	 position: relative;
+	 width: 0.25rem;
+	 background: #9a9e97;
+	 height: 6rem;
+	 border-radius: 1rem;
+}
+ .recordplayer__top .controls .switches .level::before {
+	 width: 2rem;
+	 height: 1rem;
+	 background: #5a5e58;
+	 border-radius: 0.25rem;
+	 left: -0.85rem;
+	 top: 28%;
+}
+ .recordplayer__bottom {
+	 z-index: 1;
+	 position: absolute;
+	 bottom: 0;
+	 width: 100%;
+	 height: 15%;
+	 background: linear-gradient(#1e1e1e, #444545);
+	 border-radius: 0.3rem;
+}
+ @keyframes spin {
+	 0% {
+		 transform: rotateZ(0deg);
+	}
+	 50% {
+		 transform: rotateZ(180deg);
+	}
+	 100% {
+		 transform: rotateZ(360deg);
+	}
+}
+</style>
            				<p>
 	    				 Най-добрият дискорд бот за теб на тема музика.<br>Когато и където искаш!
 	   				</p>
