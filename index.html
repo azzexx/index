@@ -49,424 +49,6 @@
     <link rel="preload" href="https://azzexx.github.io/index/fonts/inter-italic.woff2" as="font" type="font/woff2">
     <link rel="preload" href="https://azzexx.github.io/index/fonts/inter-semibold.woff2" as="font" type="font/woff2">
     <link rel="preload" href="https://azzexx.github.io/index/fonts/roboto-mono-bold.woff2" as="font" type="font/woff2">
-<style>
-.slider {
-  position: relative;
-  width: 960px;
-  height: 300px;
-  margin: 50px auto;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  border: 1px solid #333539;
-  background: #222226;
-}
-
-.slider-controls {
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  width: 200px;
-  text-align: center;
-  transform: translatex(-50%);
-  z-index: 1000;
-
-  list-style: none;
-  text-align: center;
-}
-
-.slider input[type="radio"] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider-controls label {
-  display: inline-block;
-  border: none;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  border: 1px solid #333539;	
-  cursor: pointer;
-  background-color: var(--color-bg);
-  transition: background-color 0.2s linear;
-}
-
-#btn-1:checked ~ .slider-controls label[for="btn-1"] {
-  background-color: #3f51b5;
-}
- 
-#btn-2:checked ~ .slider-controls label[for="btn-2"] {
-  background-color: #3f51b5;
-}
-
-#btn-3:checked ~ .slider-controls label[for="btn-3"] {
-  background-color: #3f51b5;
-}
-	
-/* SLIDES */
-
-.slides {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  height: 100%;
-}
-
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  display: flex;
-  justify-content: space-between;
-  padding: 27px;
-  width: 100%;
-  height: 100%;
-
-  opacity: 0;
-  transform: translatex(-100%);
-  transition: transform 250ms linear;
-}
-
-.slide-content {
-  width: 400px;
-}
-
-.slide-title {
-  margin-bottom: 10px;
-  font-size: 36px;
-}
-
-.slide-text {
-  margin-bottom: 10px;
-}
-
-.slide-image img {
-  max-width: 100%;
-}
-
-/* Slide animations */
-#btn-1:checked ~ .slides .slide:nth-child(1) {
-  transform: translatex(0);
-  opacity: 1;
-}
-
-#btn-2:checked ~ .slides .slide:nth-child(2) {
-  transform: translatex(0);
-  opacity: 1;
-}
-
-#btn-3:checked ~ .slides .slide:nth-child(3) {
-  transform: translatex(0);
-  opacity: 1;
-}
-
-#btn-1:not(:checked) ~ .slides .slide:nth-child(1) {
-  animation-name: swap-out;
-  animation-duration: 300ms;
-  animation-timing-function: linear;
-}
-
-#btn-2:not(:checked) ~ .slides .slide:nth-child(2) {
-  animation-name: swap-out;
-  animation-duration: 300ms;
-  animation-timing-function: linear;
-}
-
-#btn-3:not(:checked) ~ .slides .slide:nth-child(3) {
-  animation-name: swap-out;
-  animation-duration: 300ms;
-  animation-timing-function: linear;
-}
-
-@keyframes swap-out {
-  0% {
-    transform: translatex(0);
-    opacity: 1;
-  }
-
-  50% {
-    transform: translatex(50%);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translatex(100%);
-  }
-}
-body::-webkit-scrollbar {
-    width: 10px;
-    padding: 100px 100px;
-}
-
-body::-webkit-scrollbar-track {
-    background: var(--scrollbar);
-}
-
-body::-webkit-scrollbar-thumb {
-    top: 20px;
-    background-image: var(--gradient-tertiary);
-    background-color: var(--color-bg);
-    border-radius: 12px;
-    transition: 0.3s;
-    border: 2px solid var(--color-bg);
-    border-top: 4px solid var(--color-bg);
-    border-bottom: 4px solid var(--color-bg);
-}
-	
-.azexx-logo {
-  margin-top: 80px;
-  font-family: var(--sans-heading);
-  font-size: 100px;
-  text-decoration-color: #5f3a9f;
-}
-
-.support {
-  font-family: var(--sans-heading);
-}
-	
-body::-moz-selection { /* Code for Firefox */
-    color: #3f51b5;
-    background: #1d222700;
-    border-radius: 10px;
-}
-
-body::selection {
-    color: #3f51b5;
-    background: #1d222700;
-    border-radius: 10px;
-}
-	
-.animationdp {
-  animation-name: dpanimation;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes dpanimation {
-  0%   {bottom:200px; top:10px;}
-  25%  {bottom:200px; top:20px;}
-  50%  {bottom:200px; top:10px;}
-  75%  {bottom:200px; top:20px;}
-  100% {bottom:200px; top:10px;}
-}
-
-/* myright */
-.myright {		
-	animation: myright 1s ease 0s 1 normal forwards;
-}
-		
-@keyframes myright {
-  0% {
-    animation-timing-function: ease-in;
-    opacity: 0;
-    transform: translateX(250px);
-  }
-
-  38% {
-    animation-timing-function: ease-out;
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  55% {
-    animation-timing-function: ease-in;
-    transform: translateX(68px);
-  }
-
-  72% {
-    animation-timing-function: ease-out;
-    transform: translateX(0);
-  }
-
-  81% {
-    animation-timing-function: ease-in;
-    transform: translateX(32px);
-  }
-
-  90% {
-    animation-timing-function: ease-out;
-    transform: translateX(0);
-  }
-
-  95% {
-    animation-timing-function: ease-in;
-    transform: translateX(8px);
-  }
-
-  100% {
-    animation-timing-function: ease-out;
-    transform: translateX(0);
-  }
-}
-
-/* myleft */
-.myleft {
-	animation: myleft 1s ease 0s 1 normal forwards;
-}
-
-@keyframes myleft {
-  0% {
-    animation-timing-function: ease-in;
-    opacity: 0;
-    transform: translateX(-250px);
-  }
-
-  38% {
-    animation-timing-function: ease-out;
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  55% {
-    animation-timing-function: ease-in;
-    transform: translateX(-68px);
-  }
-
-  72% {
-    animation-timing-function: ease-out;
-    transform: translateX(0);
-  }
-
-  81% {
-    animation-timing-function: ease-in;
-    transform: translateX(-28px);
-  }
-
-  90% {
-    animation-timing-function: ease-out;
-    transform: translateX(0);
-  }
-
-  95% {
-    animation-timing-function: ease-in;
-    transform: translateX(-8px);
-  }
-
-  100% {
-    animation-timing-function: ease-out;
-    transform: translateX(0);
-  }
-}
-
-/* mybottom */
-.mybottom {
-animation: mybottom 1s ease 0s 1 normal forwards;
-}
-
-@keyframes mybottom {
-  0% {
-    animation-timing-function: ease-in;
-    opacity: 0;
-    transform: translateY(250px);
-  }
-
-  38% {
-    animation-timing-function: ease-out;
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  55% {
-    animation-timing-function: ease-in;
-    transform: translateY(65px);
-  }
-
-  72% {
-    animation-timing-function: ease-out;
-    transform: translateY(0);
-  }
-
-  81% {
-    animation-timing-function: ease-in;
-    transform: translateY(28px);
-  }
-
-  90% {
-    animation-timing-function: ease-out;
-    transform: translateY(0);
-  }
-
-  95% {
-    animation-timing-function: ease-in;
-    transform: translateY(8px);
-  }
-
-  100% {
-    animation-timing-function: ease-out;
-    transform: translateY(0);
-  }
-}
-
-@keyframes musicblock {
-  0% {
-    opacity: 0;
-    transform: rotateX(70deg);
-    transform-origin: top;
-  }
-
-  100% {
-    opacity: 1;
-    transform: rotateX(0deg);
-    transform-origin: top;
-  }
-}
-
-.mybottombtn { animation: mybottombtn 1s ease 0s 1 normal forwards; }
-@keyframes mybottombtn {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.shape1 {
-clip-path: polygon(30% 9%, 0 66%, 69% 80%);
-position: absolute;
-padding: 200px;
-background-color: #3f51b5;
-margin-top: 10em;
-margin-left: 69em;	
-}
-
-/* 1 */
-.animationdp1 {
-  animation-name: dpanimation1;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes dpanimation1 {
-  0%   {left:200px; right:10px;}
-  25%  {left:200px; right:20px;}
-  50%  {left:200px; right:10px;}
-  75%  {left:200px; right:20px;}
-  100% {left:200px; right:10px;}
-}
-/* 2 */
-.animationdp2 {
-  animation-name: dpanimation2;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes dpanimation2 {
-  0%   {right:200px; left:10px;}
-  25%  {right:200px; left:20px;}
-  50%  {right:200px; left:10px;}
-  75%  {right:200px; left:20px;}
-  100% {right:200px; left:10px;}
-}
-</style>
 </head>
 <body class="page-builderTemplate"style="
     background-color: #141518;
@@ -481,18 +63,6 @@ margin-left: 69em;
 <!-- Shapes -->  
 <!-- End -->	
 <div class="shape1"></div>	
-	
-<!-- Navigation Menu -->
-<div class="navigation-main">
-	<li><div class="navigation-item"></div></li>
-	<li><div class="navigation-item"></div></li>
-	<li><div class="navigation-item"></div></li>
-	<li><div class="navigation-item"></div></li>
-	<li><div class="navigation-item"></div></li>
-	<li><div class="navigation-item"></div></li>
-	<li><div class="navigation-item"></div></li>
-</div>
-<!-- End Navigation Menu -->
 	
 <a href="#content" class="skip-link">Skip</a>
  <div class="contentWrapper">
@@ -598,8 +168,22 @@ $(document).ready(function(){
              </div>
             </div>
           </header>
-<!-- details -->
+
+<!-- Navigation Menu -->
+<div class="navigation-main">
+	<li><div class="navigation-item"></div></li>
+	<li><div class="navigation-item"></div></li>
+	<li><div class="navigation-item"></div></li>
+	<li><div class="navigation-item"></div></li>
+	<li><div class="navigation-item"></div></li>
+	<li><div class="navigation-item"></div></li>
+	<li><div class="navigation-item"></div></li>
+</div>
+<!-- End Navigation Menu -->
+	
 	 
+<!-- details -->
+	
 <!-- Контрол на звука -->
 <details style="margin-top: 48px;margin-left: 5px;display: inline;" class="question mybottombtn animationdp1" data-v-8612b6bc="" data-v-42cc7d2e="">
   <summary data-v-8612b6bc=""><span data-v-8612b6bc="">
@@ -1226,5 +810,424 @@ ga('send', 'pageview');
 <strong href="https://azzexx.github.io/index/#support-azexx" onclick="location.href='/support-azexx'" />
 <strong href="https://azzexx.github.io/index/#about-azexx" onclick="location.href='/about-azexx'" />
 </strong>
+
+<style>
+.slider {
+  position: relative;
+  width: 960px;
+  height: 300px;
+  margin: 50px auto;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: 1px solid #333539;
+  background: #222226;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 200px;
+  text-align: center;
+  transform: translatex(-50%);
+  z-index: 1000;
+
+  list-style: none;
+  text-align: center;
+}
+
+.slider input[type="radio"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider-controls label {
+  display: inline-block;
+  border: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid #333539;	
+  cursor: pointer;
+  background-color: var(--color-bg);
+  transition: background-color 0.2s linear;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"] {
+  background-color: #3f51b5;
+}
+ 
+#btn-2:checked ~ .slider-controls label[for="btn-2"] {
+  background-color: #3f51b5;
+}
+
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+  background-color: #3f51b5;
+}
+	
+/* SLIDES */
+
+.slides {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 27px;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  transform: translatex(-100%);
+  transition: transform 250ms linear;
+}
+
+.slide-content {
+  width: 400px;
+}
+
+.slide-title {
+  margin-bottom: 10px;
+  font-size: 36px;
+}
+
+.slide-text {
+  margin-bottom: 10px;
+}
+
+.slide-image img {
+  max-width: 100%;
+}
+
+/* Slide animations */
+#btn-1:checked ~ .slides .slide:nth-child(1) {
+  transform: translatex(0);
+  opacity: 1;
+}
+
+#btn-2:checked ~ .slides .slide:nth-child(2) {
+  transform: translatex(0);
+  opacity: 1;
+}
+
+#btn-3:checked ~ .slides .slide:nth-child(3) {
+  transform: translatex(0);
+  opacity: 1;
+}
+
+#btn-1:not(:checked) ~ .slides .slide:nth-child(1) {
+  animation-name: swap-out;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+}
+
+#btn-2:not(:checked) ~ .slides .slide:nth-child(2) {
+  animation-name: swap-out;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+}
+
+#btn-3:not(:checked) ~ .slides .slide:nth-child(3) {
+  animation-name: swap-out;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+}
+
+@keyframes swap-out {
+  0% {
+    transform: translatex(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translatex(50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translatex(100%);
+  }
+}
+body::-webkit-scrollbar {
+    width: 10px;
+    padding: 100px 100px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scrollbar);
+}
+
+body::-webkit-scrollbar-thumb {
+    top: 20px;
+    background-image: var(--gradient-tertiary);
+    background-color: var(--color-bg);
+    border-radius: 12px;
+    transition: 0.3s;
+    border: 2px solid var(--color-bg);
+    border-top: 4px solid var(--color-bg);
+    border-bottom: 4px solid var(--color-bg);
+}
+	
+.azexx-logo {
+  margin-top: 80px;
+  font-family: var(--sans-heading);
+  font-size: 100px;
+  text-decoration-color: #5f3a9f;
+}
+
+.support {
+  font-family: var(--sans-heading);
+}
+	
+body::-moz-selection { /* Code for Firefox */
+    color: #3f51b5;
+    background: #1d222700;
+    border-radius: 10px;
+}
+
+body::selection {
+    color: #3f51b5;
+    background: #1d222700;
+    border-radius: 10px;
+}
+	
+.animationdp {
+  animation-name: dpanimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dpanimation {
+  0%   {bottom:200px; top:10px;}
+  25%  {bottom:200px; top:20px;}
+  50%  {bottom:200px; top:10px;}
+  75%  {bottom:200px; top:20px;}
+  100% {bottom:200px; top:10px;}
+}
+
+/* myright */
+.myright {		
+	animation: myright 1s ease 0s 1 normal forwards;
+}
+		
+@keyframes myright {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateX(250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateX(68px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateX(32px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateX(8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+}
+
+/* myleft */
+.myleft {
+	animation: myleft 1s ease 0s 1 normal forwards;
+}
+
+@keyframes myleft {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateX(-68px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateX(-28px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateX(-8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+  }
+}
+
+/* mybottom */
+.mybottom {
+animation: mybottom 1s ease 0s 1 normal forwards;
+}
+
+@keyframes mybottom {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateY(250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateY(65px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateY(28px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateY(8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+}
+
+@keyframes musicblock {
+  0% {
+    opacity: 0;
+    transform: rotateX(70deg);
+    transform-origin: top;
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+    transform-origin: top;
+  }
+}
+
+.mybottombtn { animation: mybottombtn 1s ease 0s 1 normal forwards; }
+@keyframes mybottombtn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.shape1 {
+clip-path: polygon(30% 9%, 0 66%, 69% 80%);
+position: absolute;
+padding: 200px;
+background-color: #3f51b5;
+margin-top: 10em;
+margin-left: 69em;	
+}
+
+/* 1 */
+.animationdp1 {
+  animation-name: dpanimation1;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dpanimation1 {
+  0%   {left:200px; right:10px;}
+  25%  {left:200px; right:20px;}
+  50%  {left:200px; right:10px;}
+  75%  {left:200px; right:20px;}
+  100% {left:200px; right:10px;}
+}
+/* 2 */
+.animationdp2 {
+  animation-name: dpanimation2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dpanimation2 {
+  0%   {right:200px; left:10px;}
+  25%  {right:200px; left:20px;}
+  50%  {right:200px; left:10px;}
+  75%  {right:200px; left:20px;}
+  100% {right:200px; left:10px;}
+}
+</style>
 </body>
 </html>
